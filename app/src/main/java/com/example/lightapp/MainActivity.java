@@ -13,6 +13,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
     private SensorManager sensorManager;
@@ -43,6 +44,29 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    public void add(android.view.View view){
+        setContentView(R.layout.add_device);
+    }
+
+    public void high(android.view.View view){
+
+        view.findViewById(R.id.low).setVisibility(View.INVISIBLE);
+        view.findViewById(R.id.medium).setVisibility(View.INVISIBLE);
+        view.findViewById(R.id.high).setVisibility(View.VISIBLE);
+    }
+
+    public void low(android.view.View view){
+        view.findViewById(R.id.low).setVisibility(View.VISIBLE);
+        view.findViewById(R.id.medium).setVisibility(View.INVISIBLE);
+        view.findViewById(R.id.high).setVisibility(View.INVISIBLE);
+    }
+
+    public void medium(android.view.View view){
+        view.findViewById(R.id.low).setVisibility(View.INVISIBLE);
+        view.findViewById(R.id.medium).setVisibility(View.VISIBLE);
+        view.findViewById(R.id.high).setVisibility(View.INVISIBLE);
+    }
+
     private void changeBackgroundColor(int offset) {
         String colorOffset = toHexColorString(offset*50);
         String colorStr = baseColor.replace("00",colorOffset);
@@ -68,8 +92,9 @@ public class MainActivity extends AppCompatActivity {
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
         layout = findViewById(R.id.layout);
         changeBackgroundColor(0);
-
     }
+
+
 
     @Override
     protected void onResume() {
@@ -82,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         sensorManager.unregisterListener(sensorEventListener);
     }
+
 }
 
 
