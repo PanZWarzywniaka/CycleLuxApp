@@ -10,6 +10,8 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Sensor sensor;
     private ConstraintLayout layout;
     private final String baseColor = "#00CF01";
+    private CameraManager mCameraManager;
+    private String mCameraId;
 
     private SensorEventListener sensorEventListener = new SensorEventListener() {
         @Override
@@ -30,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             String msg = "Score: "+ score;
             Log.d("EVENT", msg);
             changeBackgroundColor((int)score);
+
+            //flash light
+            boolean active = score > 5;
+            switchFlashLight(active);
+
+
 
         }
 
@@ -65,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
         layout = findViewById(R.id.layout);
         changeBackgroundColor(0);
 
+        //getting the camera manager and camera id
+        mCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
+        try {
+            mCameraId = mCameraManager.getCameraIdList()[0];
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
@@ -77,6 +95,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         sensorManager.unregisterListener(sensorEventListener);
+    }
+
+    private void switchFlashLight(boolean status) {
+        try {
+            mCameraManager.setTorchMode(mCameraId, status);
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
 
