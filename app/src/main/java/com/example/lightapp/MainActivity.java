@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
             float dz = event.values[2];
             double score = Math.sqrt(dx*dx + dy*dy + dz*dz);
             String msg = "Score: "+ score;
-//            String msg = "Values:" +
-//                    "    dx: " + dx +
-//                    "    dy: " + dy +
-//                    "    dz: " + dz;
             Log.d("EVENT", msg);
             changeBackgroundColor((int)score);
 
