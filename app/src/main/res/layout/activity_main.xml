@@ -50,7 +50,7 @@
 
 <!--    brightness slider here-->
     <RadioGroup
-        android:checkedButton="@+id/sensing_on"
+        android:checkedButton="@+id/sensing_off"
         android:id="@+id/sensing_toggle"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -60,6 +60,22 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/out_line"
         android:orientation="horizontal">
+
+
+
+        <RadioButton
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/sensing_off"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/sensing_off"
+            android:textColor="@color/white" />
 
         <RadioButton
             android:layout_marginTop="1dp"
@@ -75,23 +91,10 @@
             android:text="@string/sensing_on"
             android:textColor="@color/white" />
 
-        <RadioButton
-            android:layout_marginEnd="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:id="@+id/sensing_off"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/toggle_widget_background"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/sensing_off"
-            android:textColor="@color/white" />
     </RadioGroup>
 
     <RadioGroup
-        android:checkedButton="@+id/blinking_on"
+        android:checkedButton="@+id/blinking_off"
         android:id="@+id/blinking_toggle"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -129,6 +132,7 @@
             android:button="@null"
             android:gravity="center"
             android:text="@string/blinking_on"
+
             android:textColor="@color/white" />
     </RadioGroup>
 

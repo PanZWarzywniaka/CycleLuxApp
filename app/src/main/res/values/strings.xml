@@ -4,8 +4,8 @@
     <string name="off">OFF</string>
     <string name="lgt_on">Light On</string>
     <string name="lgt_off">Light Off</string>
-    <string name="sensing_on">Sensing Motion</string>
-    <string name="sensing_off">Always On</string>
+    <string name="sensing_on">Motion Sensor On</string>
+    <string name="sensing_off">Motion Sensor Off</string>
     <string name="blinking_on">Blinking On</string>
     <string name="blinking_off">Blinking Off</string>
 </resources>
