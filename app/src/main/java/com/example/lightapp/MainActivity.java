@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 
 public class MainActivity extends AppCompatActivity {
     private SensorManager sensorManager;
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private final String baseColor = "#00CF01";
     private CameraManager mCameraManager;
     private String mCameraId;
+    private SeekBar brightness;
+    private SeekBar interval;
 
     private SensorEventListener sensorEventListener = new SensorEventListener() {
         @Override
@@ -75,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
         layout = findViewById(R.id.layout);
         //changeBackgroundColor(0);
-
+        brightness = (SeekBar) findViewById(R.id.brightnessBar);
+        interval = (SeekBar) findViewById(R.id.intervalBar);
         //getting the camera manager and camera id
         mCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
         try {

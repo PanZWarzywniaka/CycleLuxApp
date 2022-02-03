@@ -3,10 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable/out_line.xml" value="0.2525" />
-        <entry key="app/src/main/res/drawable/toggle_widget_background.xml" value="0.2525" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/add_device.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Shaik/OneDrive/Documents/LightApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Shaik/OneDrive/Documents/LightApp/app/src/main/res/layout/add_device.xml" value="0.22" />
+        <entry key="..\:/Users/Shaik/OneDrive/Documents/LightApp/app/src/main/res/layout/layout_seekbar_thumb.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>
