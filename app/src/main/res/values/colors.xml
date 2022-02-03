@@ -13,5 +13,10 @@
     <color name="red">#CD0000</color>
     <color name="light_red">#F85E5E</color>
     <color name="beige">#F5F5DC</color>
-    F5F5DC
+    <color name="light_off">#D6D6D6</color>
+    <color name="light_lvl1">#FDF5AF</color>
+    <color name="light_lvl2">#F8EE94</color>
+    <color name="light_lvl3">#FAEB6B</color>
+    <color name="light_lvl4">#FBE83C</color>
+    <color name="light_lvl5">#FFE500</color>
 </resources>

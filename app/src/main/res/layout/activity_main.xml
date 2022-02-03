@@ -58,7 +58,7 @@
         />
 
     <com.google.android.material.slider.Slider
-        android:id="@+id/discreteSlider"
+        android:id="@+id/brightness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:valueFrom="1.0"
@@ -67,6 +67,7 @@
         android:value="3.0"
         app:thumbColor="@color/red"
         app:trackColor="@color/light_red"
+        app:haloColor="@color/light_red"
         />
 
     <RadioGroup
@@ -113,49 +114,66 @@
 
     </RadioGroup>
 
-    <RadioGroup
-        android:checkedButton="@+id/blinking_off"
-        android:id="@+id/blinking_toggle"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/out_line"
-        android:orientation="horizontal">
+<!--    <RadioGroup-->
+<!--        android:checkedButton="@+id/blinking_off"-->
+<!--        android:id="@+id/blinking_toggle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginBottom="50dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_marginRight="50dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:background="@drawable/out_line"-->
+<!--        android:orientation="horizontal">-->
 
-        <RadioButton
-            android:layout_marginEnd="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="1dp"
-            android:id="@+id/blinking_off"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/toggle_widget_background"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/blinking_off"
-            android:textColor="@color/white" />
+<!--        <RadioButton-->
+<!--            android:layout_marginEnd="1dp"-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:layout_marginBottom="1dp"-->
+<!--            android:id="@+id/blinking_off"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/toggle_widget_background"-->
+<!--            android:button="@null"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/blinking_off"-->
+<!--            android:textColor="@color/white" />-->
 
 
-        <RadioButton
-            android:layout_marginTop="1dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginEnd="1dp"
-            android:id="@+id/blinking_on"
-            android:background="@drawable/toggle_widget_background"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:gravity="center"
-            android:text="@string/blinking_on"
+<!--        <RadioButton-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:layout_marginStart="1dp"-->
+<!--            android:layout_marginEnd="1dp"-->
+<!--            android:id="@+id/blinking_on"-->
+<!--            android:background="@drawable/toggle_widget_background"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:button="@null"-->
+<!--            android:gravity="center"-->
+<!--            android:text="@string/blinking_on"-->
 
-            android:textColor="@color/white" />
-    </RadioGroup>
+<!--            android:textColor="@color/white" />-->
+<!--    </RadioGroup>-->
 
 <!--    blinking frequency slider here-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/circle_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/circle"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
