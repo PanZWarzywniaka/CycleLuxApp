@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LightApp</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="lgt_on">Light On</string>
+    <string name="lgt_off">Light Off</string>
 </resources>

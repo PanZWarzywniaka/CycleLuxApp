@@ -15,11 +15,12 @@ import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
     private SensorManager sensorManager;
     private Sensor sensor;
-    private ConstraintLayout layout;
+    private LinearLayout layout;
     private final String baseColor = "#00CF01";
     private CameraManager mCameraManager;
     private String mCameraId;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             double score = Math.sqrt(dx*dx + dy*dy + dz*dz);
             String msg = "Score: "+ score;
             Log.d("EVENT", msg);
-            changeBackgroundColor((int)score);
+            //changeBackgroundColor((int)score);
 
             //flash light
             boolean active = score > 5;
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
         layout = findViewById(R.id.layout);
-        changeBackgroundColor(0);
+        //changeBackgroundColor(0);
 
         //getting the camera manager and camera id
         mCameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         sensorManager.unregisterListener(sensorEventListener);
+        switchFlashLight(false);
     }
 
     private void switchFlashLight(boolean status) {
