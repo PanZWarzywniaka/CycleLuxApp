@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     private void reset() {
         switchSensing(false);
+        switchFlashLight(false);
         RadioGroup sensing_toggle = (RadioGroup) findViewById(R.id.sensing_toggle);
         sensing_toggle.check(R.id.sensing_off);
 

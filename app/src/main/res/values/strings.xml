@@ -8,4 +8,5 @@
     <string name="sensing_off">Motion Sensor Off</string>
     <string name="blinking_on">Blinking On</string>
     <string name="blinking_off">Blinking Off</string>
+    <string name="slider_text">Brightness:</string>
 </resources>

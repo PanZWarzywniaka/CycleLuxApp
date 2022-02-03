@@ -11,6 +11,7 @@
     <color name="dark_pink">#702B7C</color>
     <color name="transparent">#00000000</color>
     <color name="red">#CD0000</color>
+    <color name="light_red">#F85E5E</color>
     <color name="beige">#F5F5DC</color>
     F5F5DC
 </resources>

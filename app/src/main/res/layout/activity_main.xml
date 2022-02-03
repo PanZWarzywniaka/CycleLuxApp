@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -47,8 +48,27 @@
             android:textColor="@color/white" />
 
     </RadioGroup>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/slider_text"
+        android:textColor="@color/black"
+        android:layout_marginStart="11dp"
+        android:textSize="20sp"
+        />
 
-<!--    brightness slider here-->
+    <com.google.android.material.slider.Slider
+        android:id="@+id/discreteSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1.0"
+        android:valueTo="5"
+        android:stepSize="1.0"
+        android:value="3.0"
+        app:thumbColor="@color/red"
+        app:trackColor="@color/light_red"
+        />
+
     <RadioGroup
         android:checkedButton="@+id/sensing_off"
         android:id="@+id/sensing_toggle"
