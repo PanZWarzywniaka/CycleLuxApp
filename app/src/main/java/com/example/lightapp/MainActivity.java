@@ -142,14 +142,11 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     @Override
     protected void onResume() {
         super.onResume();
-        switchSensing(true);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        switchSensing(false);
-        switchFlashLight(false);
     }
     private void switchSensing(boolean status) {
 
